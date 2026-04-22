@@ -32,10 +32,11 @@ let livro3 = {
     autor: "cleitinho de assis",
      editora: "sintonia arrochada"
 }
+console.log('questão 1')
 console.log(Livraria)
 Livraria.livros.push(livro1,livro2,livro3)
-
 console.log(Livraria)
+console.log('questão 1')
 //Atividade 1
 // Com base no objeto modeloLivro, crie 3 novos objetos representando livros diferentes e adicione-os ao array de livros da livraria. Use a desestruturação para criar os novos objetos a partir do modeloLivro.
 //para adicionar os livros na propriedade livros da livraria, poderá usar os métodos de arrays. 
@@ -43,8 +44,13 @@ console.log(Livraria)
 
 //Atividade 2
 //Use o laço for of e o for in para exibir as informações de cada livro da livraria. O for of deve ser usado para iterar sobre o array de livros, enquanto o for in deve ser usado para iterar sobre as propriedades de cada livro. Exiba o título, autor e preço de cada livro em uma string formatada. Ex: "O livro X do autor Y custa Z reais".
+for(let livro of Livraria.livros){
 
+    for(let chave in livro){
+        console.log(`o livro ${livro.titulo} do autor ${livro.autor} custa ${livro.preco} R$`)
+    }
 
+}
 //Atividade3 
 // Converta o objeto da livraria para JSON usando o método JSON.stringify() e exiba o resultado no console.
 
